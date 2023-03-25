@@ -1,0 +1,762 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.buyMenu{
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+#hideBuyMenu{
+  display: none;
+}
+.main{
+  display: flex;
+  justify-content: space-between;
+  width: 80em;
+  height: 30em;
+  padding: 5em;
+  background-color: rgb(33, 33, 33);
+  border: 0.2em solid aliceblue;
+  border-radius: 2em;
+  position: relative;
+}
+.main button{
+  position: absolute;
+  z-index: 666;
+  right: 1em;
+  top: 1em;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.main button img{
+  width: 4em;
+  height: 4em;
+}
+.main .info{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  color: aliceblue;
+}
+.main .info h1{
+  font-family: 'Poppins', sans-serif;
+  color: aqua;
+  font-size: 2.5em;
+}
+.main .content{
+  display: flex;
+  height: 100%;
+  width: 60%;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .SOCIAL{
+  margin-top: 2em;
+}
+
+
+#socialMediaDialog{
+  display: none;
+}
+
+.socialMediaDialog{
+  opacity: 0;
+  display: block;
+  position: fixed;
+  right: 1em;
+  top: 3em;
+  height: 12em;
+  width: 3em;
+  z-index: 100;
+  overflow: hidden;
+}
+.socialMediaDialog .dialogOpen{
+  transition: 1s;
+  background-color: rgb(0,0,0,0);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: none;
+  border-radius: 0 0 3em 3em;
+  overflow: hidden;
+}
+.socialMediaDialog .dialogOpen img{
+width: 3.5em;
+height: 3.5em;
+}
+
+
+.headerDIV{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.nav{
+  position: fixed;
+  width: 100%;
+  height: 5em;
+  z-index: 10;
+  transition: 0.5s;
+  animation: navAPPEAR 1s linear;
+  filter: blur(0);
+}
+@keyframes navAPPEAR{
+  0%{
+    filter: blur(0.1em);
+    opacity: 0;
+    transform: translateY(-3em);
+  }
+  100%{
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.navDown{
+  background-color: black;
+  border-bottom: 0.2em solid aliceblue;
+  transition: 1s;
+}
+#nav ul{
+  height: 100%;
+  list-style: none;
+  display: flex;
+  gap: 0.8em;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 1em;
+}
+#nav ul li{
+  display: block;
+  font-size: 1.5em;
+  padding: 0.3em 0.8em;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+#nav ul li a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.welcome{
+  background-image: url(imgs/39607.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcome h1{
+  color: aliceblue;
+  font-size: 10em;
+  text-shadow: 0em 0.04em 0.1em rgb(155, 213, 255);
+  animation: blurAppear 1s ease-out;
+  filter: blur(0);
+}
+@keyframes blurAppear{
+  0%{
+    filter: blur(0.1em);
+    opacity: 0;
+    transform: translateX(-1em);
+  }
+  100%{
+    filter: blur(0em);
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about h1{
+  margin-bottom: 1em;
+}
+.about p{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  transition: 1s;
+}
+.hidden{
+  opacity: 0;
+}
+.aboutTextShow{
+  animation: AboutAppear 1s ease-out;
+  filter: blur(0em);
+  opacity: 1;
+}
+
+@keyframes AboutAppear{
+0%{
+  filter: blur(0.1em);
+  opacity: 0;
+  transform: translateX(-1em);
+}
+100%{
+  filter: blur(0em);
+  opacity: 1;
+  transform: translateX(0);
+}
+}
+
+.about .imgKillua{
+  background-image: url(imgs/killua-zoldyck.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 30%;
+  height: 30%;
+}
+
+.sells{
+  width: 100%;
+  height: 100em;
+  background-image: url(imgs/wormhole-astronaut-5200x3250-9640.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: aliceblue;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  position: relative;
+}
+.sells:hover{
+  background-image: url(imgs/BLUR.jpg);
+}
+
+.BuySection{
+  position: absolute;
+}
+
+.sells .itemOne{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(33, 33, 33);
+}
+.sells .itemOne .info{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+.sells .itemOne .info button{
+  width: 50%;
+  background-color: aliceblue;
+  border: none;
+  height: 3em;
+  transition: 1s;
+}
+.sells .itemOne .info h1{
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.sells .itemOne .info p{
+  font-weight: 300;
+}
+
+.sells .itemOne .info button:hover{
+  cursor: pointer;
+  background-color: rgb(33, 33, 33);
+  border: 0.3em dashed aliceblue;
+  color: aliceblue;
+  animation: borderChange 1s linear infinite;
+}
+@keyframes borderChange{
+  0%{
+      border: 0.5em dashed aliceblue;
+  }
+  100%{
+    border: 0.3em dashed aliceblue;
+  }
+}
+
+.sells .itemOne .example{
+ /*  background-image: url("imgs/examples/hand/rat.jpg"); */
+  width: 30em;
+  height: 30em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.sells .itemTwo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(33, 33, 33);
+}
+.sells .itemTwo .info{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+.sells .itemTwo .info button{
+  width: 50%;
+  background-color: aliceblue;
+  border: none;
+  height: 3em;
+  transition: 1s;
+}
+.sells .itemTwo .info h1{
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.sells .itemTwo .info p{
+  font-weight: 300;
+}
+
+.sells .itemTwo .info button:hover{
+  cursor: pointer;
+  background-color: rgb(33, 33, 33);
+  border: 0.3em dashed aliceblue;
+  color: aliceblue;
+  animation: borderChange 1s linear infinite;
+}
+@keyframes borderChange{
+  0%{
+      border: 0.5em dashed aliceblue;
+  }
+  100%{
+    border: 0.3em dashed aliceblue;
+  }
+}
+
+.sells .itemTwo .example{
+ /* background-image: url(imgs/examples/pc/vlad.jpg); */
+  width: 30em;
+  height: 30em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sells .buttons{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sells .buttons .next{
+  background-color: rgb(255, 255, 255, 0.4);
+  background-image: url(imgs/arrow-next.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 4em;
+  height: 8em;
+  border: none;
+  border-radius: 1em 0em 0 1em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.sells .buttons .next:hover{
+  transform: translateX(1em);
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 1em 1em 1em 1em;
+}
+.sells .buttons .next:active{
+  background-color: rgba(221, 221, 221, 0.9);
+}
+.sells .buttons .previous{
+  background-color: rgb(255, 255, 255, 0.4);
+  background-image: url(imgs/arrow-previous.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 4em;
+  height: 8em;
+  border: none;
+  border-radius: 0em 1em 1em 0em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.sells .buttons .previous:hover{
+  transform: translateX(-1em);
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 1em 1em 1em 1em;
+}
+.sells .buttons .previous:active{
+  background-color: rgba(221, 221, 221, 0.9);
+}
+.footer{
+  z-index: 10;
+  width: 100%;
+  height: 5em;
+  background: linear-gradient(40deg, rgb(0, 0, 0),rgb(0, 0, 0));
+  color: aliceblue;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.footer h1{
+  font-weight: 300;
+  font-size: 1.5em;
+  margin: 0 1.5em 0.5em 0;
+  text-decoration: overline;
+  font-family: 'Open Sans', sans-serif;
+  align-self: flex-end;
+}
+.footer h1 a{
+  text-decoration: none;
+  color: aqua;
+  text-decoration: overline;
+  font-family: 'Open Sans', sans-serif;
+}
+.footer ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  margin: 0 0 0.5em 1.5em;
+}
+.footer ul li{
+  display: block;
+}
+.footer ul li a{
+  text-decoration: none;
+}
+.footer ul li a img{
+  transition: 0.4s;
+  width: 2.5em;
+  height: 2.5em;
+}
+.tg:hover{
+  width: 3em;
+  height: 3em;
+}
+.vk:hover{
+  width: 3em;
+  height: 3em;
+}
+.git:hover{
+  width: 3em;
+  height: 3em;
+}
+
+@media screen and (max-width: 1300px){
+  .main{
+    width: 60em;
+    height: 30em;
+    padding: 1em;
+  }
+  .main .content{
+    height: 100%;
+    width: 100%;
+  }
+  .main .content video{
+    height: 100%;
+    width: 100%;
+  }
+  .main .info{
+    font-size: 1em;
+  }
+  .main .info h1{
+    font-family: 'Poppins', sans-serif;
+    color: aqua;
+    font-size: 2em;
+  }
+  .main .SOCIAL a img{
+    width: 5.5em;
+  }
+}
+@media screen and (max-height: 760px) {
+  .main{
+    width: 60em;
+    height: 25em;
+    padding: 2em;
+  }
+}
+@media screen and (max-height: 600px) {
+  .main{
+    width: 60em;
+    height: 20em;
+    padding: 1.5em;
+  }
+  .main .info{
+    font-size: 0.8em;
+  }
+  .main .info h1{
+    font-family: 'Poppins', sans-serif;
+    color: aqua;
+    font-size: 2em;
+  }
+  .main .SOCIAL a img{
+    width: 4.5em;
+  }
+  .main .content{
+    height: 100%;
+    width: 60%;
+  }
+  .main .content video{
+    height: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 850px){
+  .welcome h1{
+    font-size: 8em;
+  }
+  .sells{
+    height: 70em;
+    gap: 3em;
+  }
+}
+@media screen and (max-width: 720px){
+  .welcome h1{
+    font-size: 6em;
+  }
+
+  .sells .itemOne{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(33, 33, 33);
+  }
+  .sells .itemOne .info{
+    gap: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .sells .itemOne .example{
+    width: 20em;
+    height: 25em;
+  }
+
+  .sells .itemTwo .info{
+    gap: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .sells .itemTwo .example{
+    width: 20em;
+    height: 25em;
+  }
+
+  .main{
+    width: 60em;
+    height: 30em;
+    padding: 1em;
+  }
+  .main .content{
+    height: 100%;
+    width: 100%;
+  }
+  .main .content video{
+    height: 100%;
+    width: 100%;
+  }
+  .main .info{
+    font-size: 0.9em;
+  }
+  .main .info h1{
+    font-family: 'Poppins', sans-serif;
+    color: aqua;
+    font-size: 2em;
+  }
+  .main .SOCIAL{
+    margin-top: 0;
+  }
+  .main .SOCIAL a img{
+    width: 4.5em;
+  }
+}
+@media screen and (max-width:560px){
+  .welcome h1{
+    font-size: 5em;
+  }
+  .sells{
+    height: 50em;
+    gap: 2.5em;
+  }
+
+  .sells .itemOne .info{
+    gap: 0.8em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .sells .itemOne .example{
+    width: 20em;
+    height: 15em;
+  }
+  .sells .itemOne .info button{
+    width: 45%;
+    background-color: aliceblue;
+    border: none;
+    height: 2.5em;
+    transition: 1s;
+  }
+  .sells .itemOne .info h1{
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .sells .itemOne .info p{
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+
+
+  .sells .itemTwo .info{
+    gap: 0.8em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .sells .itemTwo .example{
+    width: 20em;
+    height: 15em;
+  }
+  .sells .itemTwo .info button{
+    width: 45%;
+    background-color: aliceblue;
+    border: none;
+    height: 2.5em;
+    transition: 1s;
+  }
+  .sells .itemTwo .info h1{
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .sells .itemTwo .info p{
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+
+  .sells .buttons .next{
+    background-image: url(imgs/arrow-next.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 3em;
+    height: 7em;
+    border-radius: 0.8em 0em 0 0.8em;
+  }
+  .sells .buttons .previous{
+    background-image: url(imgs/arrow-previous.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 3em;
+    height: 7em;
+    border-radius: 0em 0.8em 0.8em 0em;
+  }
+}
+
+@media screen and (max-width: 460px){
+  .welcome h1{
+    font-size: 4.5em;
+  }
+  .sells{
+    height: 50em;
+    gap: 1.5em;
+  }
+
+  .sells .itemOne .info{
+    gap: 0.8em;
+    margin-left: 1em;
+    margin-right: 0em;
+  }
+  .sells .itemOne .example{
+    width: 18em;
+    height: 15em;
+  }
+  .sells .itemOne .info h1{
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .sells .itemOne .info p{
+    font-size: 0.6em;
+    font-weight: 300;
+  }
+  .sells .itemOne .info button{
+    width: 45%;
+    background-color: aliceblue;
+    border: none;
+    height: 2em;
+    transition: 1s;
+  }
+
+
+  .sells .itemTwo .info{
+    gap: 0.8em;
+    margin-left: 1em;
+    margin-right: 0em;
+  }
+  .sells .itemTwo .example{
+    width: 18em;
+    height: 15em;
+  }
+  .sells .itemTwo .info h1{
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .sells .itemTwo .info p{
+    font-size: 0.6em;
+    font-weight: 300;
+  }
+  .sells .itemTwo .info button{
+    width: 45%;
+    background-color: aliceblue;
+    border: none;
+    height: 2em;
+    transition: 1s;
+  }
+}
+
+@media screen and (max-width: 390px){
+  .welcome h1{
+    font-size: 3.5em; 
+  } 
+}

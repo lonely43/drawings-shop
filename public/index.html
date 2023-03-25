@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="photo_2022-12-19_07-24-17.jpg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Selling drawings"
+    />
+    <title>Drawings Shop</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app. #bruh</noscript>
+
+    <div class="buyMenu" id="hideBuyMenu"> <!-- id="hideBuyMenu" -->
+      <div class="main">
+        <button id="closeBuyMenu" onclick="CloseBuyMenu()"><img src="icons8-close-500.svg" alt="close"></button>
+        <div class="info">
+          <h1>Как проходит сделка?<img src="question.gif" alt="" width="25em"></h1>
+          
+          <h4>Переходите к продавцу в ТГ или ВК</h4>  
+          <h4>Пишите какой заказ интересует</h4>  
+          <h4>Обсуждаете подробности заказа</h4>
+          <h4>Ждете заказ</h4>
+          <div class="SOCIAL">
+            <a target="_blank" href="https://t.me/Alexsis049"><img width="100em" src="telegram.png" alt="tg"></a>
+            <a target="_blank" href="https://vk.com/alexsis049"><img width="100em" src="vk.png" alt="vk"></a>
+          </div>
+        </div>
+        <div class="content"> 
+          <video width="100%" height="100%" loop autoplay muted>
+            <source src="artShopExample.mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <script>
+      function CloseBuyMenu(){
+        const buyMenu = document.querySelector(".buyMenu")
+        buyMenu.id = "hideBuyMenu"
+      }
+    </script>
+
+    <div class="headerDIV">
+      <div id="nav" class="navigator nav"> 
+        <ul>
+          <li><a href="#sells">ТОВАРЫ <img src="shopping-cart.gif" width="20em" alt=""></a></li>
+          <li onclick="OpenCloseMenu()">КОНТАКТЫ</li>
+        </ul>
+      </div>
+      <div id="socialMediaDialog" class="socialMediaDialog">
+        <div class="dialogOpen">
+          <a target="_blank" href="https://t.me/Alexsis049"><img src="telegram.png" alt="tg"></a>
+          <a target="_blank" href="https://vk.com/alexsis049"><img src="vk.png" alt="vk"></a>
+        </div>
+      </div>
+      <div class="welcome">
+        <h1 class="welcome-h1">WELCOME</h1>
+      </div>
+    </div>
+    <script>
+      function OpenCloseMenu(){
+        const menu = document.querySelector(".socialMediaDialog")
+        console.log(menu.style.opacity)
+        menu.style.transition = 0.6+"s";
+        if(menu.style.opacity == 1)
+        {
+          menu.classList.remove("aboutTextShow")
+          menu.style.opacity = 0
+          menu.id = "socialMediaDialog"
+        }
+        else{
+          menu.classList.add("aboutTextShow")
+          menu.style.opacity = 1
+          menu.id = ""
+        }
+      }
+    </script>
+    <div class="about"> 
+      <h1 id="aboutH1" style="color: aqua;"> some about me </h1>
+      <p id="aboutText"> <span> 16y.o artist </span>, который выполняет поставленные задачи в срок (или возврат средств) <br> окончено специальное учебное учреждение искусств.</p>
+      <div class="imgKillua"></div>
+    </div>
+
+    <div id="sells" class="sells"> 
+      <div class="BuySection"> </div>
+      <div class="itemOne">
+        <div class="info">
+          <h1> 5000р </h1>
+          <p> Картины от руки, при помощи качественных карандашей. <br> Они содержат полностью ваши требования и пожелания. </p>
+          <span id="spawnButtonBuy1"></span>
+        </div>
+        <div id="example1" class="example"><div class="buttons"><button class="previous"></button><button class="next"></button></div></div> 
+      </div>
+        <div class="itemTwo">
+          <div class="info">
+            <h1> 2500р </h1>
+            <p> Картины в электронном виде, на граф. планшете. <br> Они содержат полностью ваши требования и пожелания. </p>
+            <span id="spawnButtonBuy2"></span>
+          </div>
+          <div id="example2" class="example"><div class="buttons">  <button class="previous"></button><button class="next"> </button></div></div> 
+        </div>
+    </div>
+    <div class="footer">
+      <div class="socialMedia"> 
+        <ul>
+          <li><a target="_blank" href="https://t.me/zxlonely"><img class="tg" src="telegram.png" alt="tg"></a></li>
+          <li><a target="_blank" href="https://vk.com/fates48"><img class="vk" src="vk.png" alt="vk"></a></li>
+          <li><a target="_blank" href="https://github.com/lonely43"><img class="git" src="github.png" alt="github"></a></li>
+        </ul>
+      </div>
+      <h1> made by <a target="_blank" href="https://t.me/zxlonely"> lonely </a></h1>
+    </div>
+
+  </body>
+</html>
