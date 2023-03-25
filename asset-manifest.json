@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/drawings-shop/static/css/main.9cf63cdd.css",
+    "main.css": "/drawings-shop/static/css/main.a602a154.css",
     "main.js": "/drawings-shop/static/js/main.fd658611.js",
     "static/media/wormhole-astronaut-5200x3250-9640.jpg": "/drawings-shop/static/media/wormhole-astronaut-5200x3250-9640.89245cf947e05910d182.jpg",
     "static/media/BLUR.jpg": "/drawings-shop/static/media/BLUR.4672674fffb81fb50ba2.jpg",
@@ -16,11 +16,11 @@
     "static/media/rat.jpg": "/drawings-shop/static/media/rat.abe20e206b35c514bff5.jpg",
     "static/media/dog.jpg": "/drawings-shop/static/media/dog.91f14f153ecacbf8a6e4.jpg",
     "index.html": "/drawings-shop/index.html",
-    "main.9cf63cdd.css.map": "/drawings-shop/static/css/main.9cf63cdd.css.map",
+    "main.a602a154.css.map": "/drawings-shop/static/css/main.a602a154.css.map",
     "main.fd658611.js.map": "/drawings-shop/static/js/main.fd658611.js.map"
   },
   "entrypoints": [
-    "static/css/main.9cf63cdd.css",
+    "static/css/main.a602a154.css",
     "static/js/main.fd658611.js"
   ]
 }
