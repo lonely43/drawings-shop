@@ -753,10 +753,124 @@ height: 3.5em;
     height: 2em;
     transition: 1s;
   }
+
+  .sells .itemOne .info button{
+    width: 50%;
+    background-color: aliceblue;
+    border: none;
+    height: 3em;
+    transition: 1s;
+  }
+  .sells .itemOne .info button:hover{
+    cursor: pointer;
+    background-color: rgb(33, 33, 33);
+    border: 0.1em dashed aliceblue;
+    color: aliceblue;
+    animation: borderChange 1s linear infinite;
+  }
+  .sells .itemTwo .info button{
+    width: 50%;
+    height: 3em;
+  }
+  .sells .itemTwo .info button:hover{
+    border: 0.1em dashed aliceblue;
+  }
 }
 
 @media screen and (max-width: 390px){
   .welcome h1{
     font-size: 3.5em; 
-  } 
+  }
+  .sells{
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .sells .itemOne{
+    width: 100%;
+  }
+  .sells .itemOne .info h1{
+    font-size: 1.5em;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+  .sells .itemOne .info p{
+    font-size: 0.6em;
+    font-weight: 400;
+  }
+  .sells .itemOne .info button{
+    width: 45%;
+    background-color: aliceblue;
+    border: none;
+    height: 2em;
+    transition: 1s;
+    font-weight: 500;
+  }
+  .sells .itemTwo{
+    width: 100%;
+  }
+  .sells .itemTwo .info h1{
+    font-size: 1.5em;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+  .sells .itemTwo .info p{
+    font-size: 0.6em;
+    font-weight: 400;
+  }
+  .sells .itemTwo .info button{
+    width: 45%;
+    background-color: aliceblue;
+    border: none;
+    height: 2em;
+    transition: 1s;
+    font-weight: 500;
+  }
+
+  .sells .buttons .next{
+    background-image: url(imgs/arrow-next.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.5em;
+    height: 6em;
+    border-radius: 0.8em 0em 0 0.8em;
+  }
+  .sells .buttons .previous{
+    background-image: url(imgs/arrow-previous.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.5em;
+    height: 6em;
+    border-radius: 0em 0.8em 0.8em 0em;
+  }
+
+  .footer h1{
+    font-weight: 300;
+    font-size: 1.2em;
+    margin: 0 1.5em 0.5em 0;
+  }
+  .footer ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    margin: 0 0 0.5em 1.5em;
+  }
+  .footer ul li a img{
+    transition: 0.4s;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .tg:hover{
+    width: 2em;
+    height: 2em;
+  }
+  .vk:hover{
+    width: 2em;
+    height: 2em;
+  }
+  .git:hover{
+    width: 2em;
+    height: 2em;
+  }
 }
