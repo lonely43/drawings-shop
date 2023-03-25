@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/drawings-shop/static/css/main.9cf63cdd.css",
+    "main.js": "/drawings-shop/static/js/main.fd658611.js",
+    "static/media/wormhole-astronaut-5200x3250-9640.jpg": "/drawings-shop/static/media/wormhole-astronaut-5200x3250-9640.89245cf947e05910d182.jpg",
+    "static/media/BLUR.jpg": "/drawings-shop/static/media/BLUR.4672674fffb81fb50ba2.jpg",
+    "static/media/somebodyArt.jpg": "/drawings-shop/static/media/somebodyArt.ab3e7195333ea7118f70.jpg",
+    "static/media/cat.jpg": "/drawings-shop/static/media/cat.76a6b7e7fb1c4cd6af6c.jpg",
+    "static/media/dogHowPriest.jpg": "/drawings-shop/static/media/dogHowPriest.b370742644afc0e0fc21.jpg",
+    "static/media/vlad.jpg": "/drawings-shop/static/media/vlad.abdd04541d088afdfb77.jpg",
+    "static/media/killua-zoldyck.png": "/drawings-shop/static/media/killua-zoldyck.941700f453b830658605.png",
+    "static/media/china.jpg": "/drawings-shop/static/media/china.0345a86009b0fd025125.jpg",
+    "static/media/Troskiy.jpg": "/drawings-shop/static/media/Troskiy.b334fa20a514a0c17c00.jpg",
+    "static/media/valhalla.jpg": "/drawings-shop/static/media/valhalla.31d0c94d640363f23f03.jpg",
+    "static/media/39607.jpg": "/drawings-shop/static/media/39607.ae48605eb85b2b1786ce.jpg",
+    "static/media/rat.jpg": "/drawings-shop/static/media/rat.abe20e206b35c514bff5.jpg",
+    "static/media/dog.jpg": "/drawings-shop/static/media/dog.91f14f153ecacbf8a6e4.jpg",
+    "index.html": "/drawings-shop/index.html",
+    "main.9cf63cdd.css.map": "/drawings-shop/static/css/main.9cf63cdd.css.map",
+    "main.fd658611.js.map": "/drawings-shop/static/js/main.fd658611.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9cf63cdd.css",
+    "static/js/main.fd658611.js"
+  ]
+}
