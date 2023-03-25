@@ -76,9 +76,19 @@ body {
   margin-top: 2em;
 }
 
-
 #socialMediaDialog{
-  display: none;
+  animation: socialMediaDialogApper 1s ease-out;
+  pointer-events: none;
+}
+@keyframes socialMediaDialogApper{
+  0%{
+    filter: blur(0em);
+    opacity: 1;
+  }
+  100%{
+    filter: blur(0.1em);
+    opacity: 0;
+  }
 }
 
 .socialMediaDialog{
@@ -773,7 +783,16 @@ height: 3.5em;
     height: 3em;
   }
   .sells .itemTwo .info button:hover{
-    border: 0.1em dashed aliceblue;
+    border: 0.06em dashed aliceblue;
+  }
+
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+  .main .content{
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -842,7 +861,6 @@ height: 3.5em;
     height: 6em;
     border-radius: 0em 0.8em 0.8em 0em;
   }
-
   .footer h1{
     font-weight: 300;
     font-size: 1.2em;
@@ -858,19 +876,19 @@ height: 3.5em;
   }
   .footer ul li a img{
     transition: 0.4s;
-    width: 1.5em;
-    height: 1.5em;
+    width: 2em;
+    height: 2em;
   }
   .tg:hover{
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
   }
   .vk:hover{
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
   }
   .git:hover{
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
   }
 }
