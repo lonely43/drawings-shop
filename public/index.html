@@ -68,11 +68,13 @@
         if(menu.style.opacity == 1)
         {
           menu.classList.remove("aboutTextShow")
+          menu.classList.add("socialMediaDialogUnAppear")
           menu.style.opacity = 0
           menu.id = "socialMediaDialog"
         }
         else{
           menu.classList.add("aboutTextShow")
+          menu.classList.remove("socialMediaDialogUnAppear")
           menu.style.opacity = 1
           menu.id = ""
         }
